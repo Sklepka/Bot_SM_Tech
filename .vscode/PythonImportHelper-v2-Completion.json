@@ -1,0 +1,91 @@
+[
+    {
+        "label": "telebot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "telebot",
+        "description": "telebot",
+        "detail": "telebot",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "telebot",
+        "description": "telebot",
+        "isExtraImport": true,
+        "detail": "telebot",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "website",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('Веб сайт')\n    start = types.KeyboardButton('Start')\n    markup.add(website, start)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "website",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('Веб сайт')\n    start = types.KeyboardButton('Start')\n    markup.add(website, start)\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup = markup)\n@bot.message_handler(content_types=['photo'])\ndef get_user_photo(message):\n    bot.send_message(message.chat.id, 'Вау, крутое фото!')\n@bot.message_handler(content_types=['text'])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_photo",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_user_photo(message):\n    bot.send_message(message.chat.id, 'Вау, крутое фото!')\n@bot.message_handler(content_types=['text'])\ndef get_user_text(message):\n    if message.text == 'Hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text == 'photo':\n        logo = open('Logo.png', 'rb')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_text",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_user_text(message):\n    if message.text == 'Hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text == 'photo':\n        logo = open('Logo.png', 'rb')\n        bot.send_photo(message.chat.id, logo)\n    else:\n        bot.send_message(message.chat.id, \"Я тебя не понимаю\", parse_mode='html')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "bot = telebot.TeleBot('5407736398:AAEbj12-ODSNzhBvtOyVnxkGMj02h1zAWYk')\n@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "@bot.message_handler(commands",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "bot.polling(none_stop",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "bot.polling(none_stop = True)",
+        "detail": "main",
+        "documentation": {}
+    }
+]

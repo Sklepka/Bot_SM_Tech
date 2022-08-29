@@ -21,7 +21,34 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):",
+        "peekOfCode": "def start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['employee_search'])\ndef employee_search(message):\n    bot.send_message(message.chat.id, 'Поиск сотрудника - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['documentation_search'])\ndef documentation_search(message):\n    bot.send_message(message.chat.id, 'Поиск документации - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['requisites'])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "employee_search",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def employee_search(message):\n    bot.send_message(message.chat.id, 'Поиск сотрудника - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['documentation_search'])\ndef documentation_search(message):\n    bot.send_message(message.chat.id, 'Поиск документации - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['requisites'])\ndef requisites(message):\n    requisites_all = f'<b>Адрес местонахождения(юридический и почтовый адрес):<\\b>\\n 196140, Санкт-Петербург г., Шушары п., Кокколевская(Пулковское тер.) ул., дом 1, стр.1,\\nпом.45-Н\\nтел. +7 (812) 331 94 44\\nОГРН 1117847356417\\nИНН 7820326027\\nКПП 782001001\\nОКВЭД 46.69.5, 27.12, 33.14, 33.20, 62.01, 62.02, 71.1, 71.12.5, 71.12.6 85.42.9\\nОКПО 92088830'\n    bot.send_message(message.chat.id, requisites_all, parse_mode='html')\n@bot.message_handler(commands=['website'])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "documentation_search",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def documentation_search(message):\n    bot.send_message(message.chat.id, 'Поиск документации - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['requisites'])\ndef requisites(message):\n    requisites_all = f'<b>Адрес местонахождения(юридический и почтовый адрес):<\\b>\\n 196140, Санкт-Петербург г., Шушары п., Кокколевская(Пулковское тер.) ул., дом 1, стр.1,\\nпом.45-Н\\nтел. +7 (812) 331 94 44\\nОГРН 1117847356417\\nИНН 7820326027\\nКПП 782001001\\nОКВЭД 46.69.5, 27.12, 33.14, 33.20, 62.01, 62.02, 71.1, 71.12.5, 71.12.6 85.42.9\\nОКПО 92088830'\n    bot.send_message(message.chat.id, requisites_all, parse_mode='html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "requisites",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def requisites(message):\n    requisites_all = f'<b>Адрес местонахождения(юридический и почтовый адрес):<\\b>\\n 196140, Санкт-Петербург г., Шушары п., Кокколевская(Пулковское тер.) ул., дом 1, стр.1,\\nпом.45-Н\\nтел. +7 (812) 331 94 44\\nОГРН 1117847356417\\nИНН 7820326027\\nКПП 782001001\\nОКВЭД 46.69.5, 27.12, 33.14, 33.20, 62.01, 62.02, 71.1, 71.12.5, 71.12.6 85.42.9\\nОКПО 92088830'\n    bot.send_message(message.chat.id, requisites_all, parse_mode='html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):",
         "detail": "main",
         "documentation": {}
     },
@@ -30,7 +57,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('Веб сайт')\n    start = types.KeyboardButton('Start')\n    markup.add(website, start)",
+        "peekOfCode": "def website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])\ndef website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('/website')\n    employee_search = types.KeyboardButton('/employee_search')\n    documentation_search = types.KeyboardButton('/documentation_search')",
         "detail": "main",
         "documentation": {}
     },
@@ -39,7 +66,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('Веб сайт')\n    start = types.KeyboardButton('Start')\n    markup.add(website, start)\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup = markup)\n@bot.message_handler(content_types=['photo'])\ndef get_user_photo(message):\n    bot.send_message(message.chat.id, 'Вау, крутое фото!')\n@bot.message_handler(content_types=['text'])",
+        "peekOfCode": "def website(message):\n    markup = types.ReplyKeyboardMarkup(resize_keyboard = True, row_width = 1)  # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    website = types.KeyboardButton('/website')\n    employee_search = types.KeyboardButton('/employee_search')\n    documentation_search = types.KeyboardButton('/documentation_search')\n    requisites = types.KeyboardButton('/requisites')\n    markup.add(website, employee_search, documentation_search, requisites)\n    bot.send_message(message.chat.id, 'Список доступных команд:', reply_markup = markup)\n@bot.message_handler(content_types=['photo'])\ndef get_user_photo(message):",
         "detail": "main",
         "documentation": {}
     },
@@ -48,7 +75,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_user_photo(message):\n    bot.send_message(message.chat.id, 'Вау, крутое фото!')\n@bot.message_handler(content_types=['text'])\ndef get_user_text(message):\n    if message.text == 'Hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text == 'photo':\n        logo = open('Logo.png', 'rb')",
+        "peekOfCode": "def get_user_photo(message):\n    bot.send_message(message.chat.id, 'И что мне делать с этим фото?')\n@bot.message_handler(content_types=['text'])\ndef get_user_text(message):\n    if message.text.lower() == 'hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text.lower() == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text.lower() == 'photo':\n        logo = open('Logo.png', 'rb')",
         "detail": "main",
         "documentation": {}
     },
@@ -57,7 +84,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_user_text(message):\n    if message.text == 'Hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text == 'photo':\n        logo = open('Logo.png', 'rb')\n        bot.send_photo(message.chat.id, logo)\n    else:\n        bot.send_message(message.chat.id, \"Я тебя не понимаю\", parse_mode='html')",
+        "peekOfCode": "def get_user_text(message):\n    if message.text.lower() == 'hello':\n        bot.send_message(message.chat.id, \"И тебе привет\", parse_mode='html')\n    elif message.text.lower() == 'id':\n        bot.send_message(message.chat.id, f\"Твои ID: {message.from_user.id}\", parse_mode='html')\n    elif message.text.lower() == 'photo':\n        logo = open('Logo.png', 'rb')\n        bot.send_photo(message.chat.id, logo)\n    else:\n        bot.send_message(message.chat.id, \"Введите '/help' для получения доступных команд\", parse_mode='html')",
         "detail": "main",
         "documentation": {}
     },
@@ -66,7 +93,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "bot = telebot.TeleBot('5407736398:AAEbj12-ODSNzhBvtOyVnxkGMj02h1zAWYk')\n@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)",
+        "peekOfCode": "bot = telebot.TeleBot('5407736398:AAEbj12-ODSNzhBvtOyVnxkGMj02h1zAWYk')\n@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['employee_search'])\ndef employee_search(message):\n    bot.send_message(message.chat.id, 'Поиск сотрудника - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['documentation_search'])\ndef documentation_search(message):",
         "detail": "main",
         "documentation": {}
     },
@@ -75,7 +102,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['website'])\ndef website(message):\n    markup = types.InlineKeyboardMarkup() # описание дополнительной разметки, позволяет создавать встроенные вещи (кнопки, картинки ...)\n    markup.add(types.InlineKeyboardButton(\"Посетить веб сайт\", url='https://spbec-mining.ru/'))\n    bot.send_message(message.chat.id, 'Перейдите на сайт!', reply_markup=markup)\n@bot.message_handler(commands=['help'])",
+        "peekOfCode": "@bot.message_handler(commands = ['start'])\ndef start(message):\n    mess = f'Привет {message.from_user.first_name}, чем могу помочь?'\n    bot.send_message(message.chat.id, mess, parse_mode = 'html')\n@bot.message_handler(commands=['employee_search'])\ndef employee_search(message):\n    bot.send_message(message.chat.id, 'Поиск сотрудника - ДОДЕЛАТЬ', parse_mode='html')\n@bot.message_handler(commands=['documentation_search'])\ndef documentation_search(message):\n    bot.send_message(message.chat.id, 'Поиск документации - ДОДЕЛАТЬ', parse_mode='html')",
         "detail": "main",
         "documentation": {}
     },
